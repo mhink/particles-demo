@@ -1,0 +1,38 @@
+// Include this if using an Icon Font
+@import "generated/icons";
+@import "generated/bourbon/bourbon";
+@import "generated/neat/neat";
+
+@import "base/base";
+@import "mixins";
+
+.container {
+  @include outer-container;
+}
+
+.sidebar {
+  @include span-columns(3);
+}
+
+.content {
+  @include span-columns(9);
+}
+
+.canvases canvas {
+  position: absolute;
+}
+
+#axis-canvas {
+  border: 1px solid #000;
+  z-index: 0;
+}
+
+#main-canvas {
+  border: 1px solid #000;
+  z-index: 1;
+}
+
+#sim-controls button {
+  display: block;
+  margin-bottom: 1rem;
+}

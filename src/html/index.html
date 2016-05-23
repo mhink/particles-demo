@@ -1,0 +1,27 @@
+{% extends 'layouts/application.html' %}
+
+{% block title %}Particles Demo{% endblock %}
+
+{% block sidebar %}
+  <h1>Controls</h1>
+  <div id="sim-controls">
+    <button>Pause</button>
+    <button>Reset</button>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div id="content-title">
+    <h1>Simulator</h1>
+    <span id="counter"><span id="counter-timesteps">0</span> steps</span>
+  </div>
+  <div class="canvases">
+    <canvas id="axis-canvas" width="640" height="240"></canvas>
+    <canvas id="main-canvas" width="640" height="240"></canvas>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="javascripts/app.js"></script>
+  <script src="fabric.min.js"></script>
+{% endblock %}
